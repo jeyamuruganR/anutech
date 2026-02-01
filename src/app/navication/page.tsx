@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, Home, Layers, DollarSign, User } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,7 +57,7 @@ export default function Navigation() {
       <header className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 max-w-7xl mx-auto backdrop-blur-md bg-background/80 border-b border-zinc-800/50">
         <div className="flex items-center gap-2">
           <div className="relative flex items-center gap-2">
-            <img 
+            <Image
               src="/TechMuruganLogo.png" 
               alt="TechMurugan Logo" 
               width={70} 
