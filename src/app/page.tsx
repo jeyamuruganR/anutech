@@ -1,37 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navigation from "./navication/page"; // Adjust the path if needed
+import { TrendingUp, Palette, Zap } from "lucide-react"; // <-- Add this import
+
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-card/20 to-background text-foreground font-sans">
       {/* Header - Improved with glass effect */}
-      <header className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 max-w-7xl mx-auto backdrop-blur-md bg-background/80 border-b border-zinc-800/50">
-        <div className="flex items-center gap-2">
-          <div className="relative">
-            <div className="absolute -inset-1 bg-primary/20 blur-lg rounded-full"></div>
-            <span className="relative text-2xl font-bold text-white tracking-tight">
-              market<span className="text-primary">me</span>
-            </span>
-          </div>
-        </div>
-        
-        <nav className="hidden md:flex gap-8 text-lg">
-          <Link href="/" className="hover:text-primary transition">Home</Link>
-          <Link href="/work" className="hover:text-primary transition">Work</Link>
-          <Link href="/pricing" className="hover:text-primary transition">Pricing</Link>
-          <Link href="/about" className="hover:text-primary transition">About</Link>
-        </nav>
-        
-        <button className="relative group bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-105">
-          <span className="relative z-10">Contact</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark to-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </button>
-      </header>
+      <Navigation />
 
       {/* Hero Section - Enhanced with gradient and animations */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
-        <div className="relative flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-20 gap-8 sm:gap-12">
+        {/* Responsive background image with increased opacity */}
+        <div className="absolute inset-0 z-0">
+          {/* Desktop background */}
+          <Image
+            src="/back.png"
+            alt="Background PC"
+            fill
+            className="hidden md:block object-cover w-full h-full opacity-80"
+            priority
+            quality={80}
+            sizes="100vw"
+          />
+          {/* Mobile background */}
+          <Image
+            src="/back2.png"
+            alt="Background Phone"
+            fill
+            className="block md:hidden object-cover w-full h-full opacity-80"
+            priority
+            quality={70}
+            sizes="100vw"
+          />
+          {/* Overlay for darkening */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/30 to-background/40" />
+        </div>
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-20 gap-8 sm:gap-12">
           <div className="flex-1 space-y-6 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium border border-primary/20">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
@@ -92,19 +98,20 @@ export default function Home() {
           </div>
           
           <div className="flex-1 flex justify-center animate-float">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl"></div>
-              <div className="relative bg-gradient-to-br from-card to-zinc-900/50 p-8 rounded-2xl border border-zinc-800/50 shadow-2xl">
-                <Image 
-                  src="/next.svg" 
+            <div className="relative flex items-center justify-center">
+              {/* Soft colored glow behind the image */}
+              <div className="absolute inset-0 z-0 rounded-3xl pointer-events-none">
+                <div className="w-full h-full rounded-3xl bg-gradient-to-br from-primary/30 via-accent/20 to-white/0 blur-2xl opacity-60"></div>
+              </div>
+              <div className="relative z-10 transition-transform duration-300 hover:scale-105 rounded-2xl shadow-2xl shadow-primary/20">
+                {/* <Image 
+                  src="/murugantech.jpeg" 
                   alt="Dashboard Preview" 
                   width={400} 
                   height={400} 
-                  className="rounded-xl"
-                />
-                <div className="absolute -bottom-4 -right-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Real-time Analytics
-                </div>
+                  className="rounded-2xl border-4 border-zinc-900/60"
+                  style={{ background: "linear-gradient(135deg, #ff6b35 0%, #3a86ff 100%)", objectFit: "cover" }}
+                /> */}
               </div>
             </div>
           </div>
@@ -126,19 +133,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                icon: "📈",
+                icon: <TrendingUp className="text-orange-500 w-10 h-10 mb-2" />, // Lucide icon
                 title: "SEO Growth",
                 description: "Boost your visibility with data-driven SEO strategies that drive organic traffic and conversions.",
                 color: "from-orange-500/20 to-orange-600/10"
               },
               {
-                icon: "🎨",
+                icon: <Palette className="text-blue-500 w-10 h-10 mb-2" />, // Lucide icon
                 title: "UI/UX Design",
                 description: "Create intuitive user experiences that engage visitors and increase conversion rates.",
                 color: "from-blue-500/20 to-blue-600/10"
               },
               {
-                icon: "⚡",
+                icon: <Zap className="text-green-500 w-10 h-10 mb-2" />, // Lucide icon
                 title: "Performance",
                 description: "Optimize your website speed and performance for better rankings and user satisfaction.",
                 color: "from-green-500/20 to-green-600/10"
@@ -271,7 +278,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="text-2xl font-bold text-white mb-4">
-                market<span className="text-primary">me</span>
+                Tech<span className="text-primary">Murugan</span>
               </div>
               <p className="text-zinc-400">
                 Empowering businesses with cutting-edge digital solutions since 2020.
@@ -318,7 +325,7 @@ export default function Home() {
           
           <div className="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-zinc-400 text-sm">
-              © {new Date().getFullYear()} MarketMe. All rights reserved.
+              © {new Date().getFullYear()} jeyamurganRajendiran. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-zinc-400 hover:text-primary transition">Privacy Policy</a>
