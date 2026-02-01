@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Home, Layers, DollarSign, User } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -57,7 +56,13 @@ export default function Navigation() {
       <header className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 max-w-7xl mx-auto backdrop-blur-md bg-background/80 border-b border-zinc-800/50">
         <div className="flex items-center gap-2">
           <div className="relative flex items-center gap-2">
-            <Image src="/TechMuruganLogo.png" alt="TechMurugan Logo" width={70} height={70} className="text-primary border-2  rounded-full object-cover" />
+            <img 
+              src="/TechMuruganLogo.png" 
+              alt="TechMurugan Logo" 
+              width={70} 
+              height={70} 
+              className="w-16 h-16 text-primary border-2 rounded-full object-cover" 
+            />
 
             <span className="relative text-2xl font-bold text-white tracking-tight">
               Tech<span className="text-primary">Murugan</span>
