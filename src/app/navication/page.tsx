@@ -58,7 +58,7 @@ export default function Navigation() {
         <div className="flex items-center gap-2">
           <div className="relative flex items-center gap-2">
             <Image
-              src="/TechMuruganLogo.png" 
+              src="/TechmruganLogo.png" 
               alt="TechMurugan Logo" 
               width={70} 
               height={70} 
