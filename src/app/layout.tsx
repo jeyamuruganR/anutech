@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "TechMurugan",
   description: "website developed by Murugan",
   icons: {
-    icon: "/TechMuruganLogo.png",
+    icon: "/TechMuruganLogo.png?v=2",
   },
 };
 
