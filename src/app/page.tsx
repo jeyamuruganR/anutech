@@ -35,7 +35,7 @@ export default function Home() {
             sizes="100vw"
           />
           {/* Overlay for darkening */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/30 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/100 via-background/50 to-background/0" />
         </div>
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-20 gap-8 sm:gap-12">
           <div className="flex-1 space-y-6 animate-fadeInUp">
@@ -60,8 +60,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg text-zinc-300 max-w-xl leading-relaxed">
-              We provide cutting-edge solutions to elevate your digital presence. 
-              From SEO to full-stack development, we've got you covered.
+              We build modern websites, SEO strategies, and full-stack solutions that help your business grow faster.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">

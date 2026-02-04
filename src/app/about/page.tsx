@@ -133,28 +133,7 @@ export default function About() {
             </a>
           </div>
 
-          {/* Team Section */}
-          <div className="mt-24">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              Meet Our <span className="text-primary">Team</span>
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { name: "Alex Chen", role: "Lead Developer", focus: "Full-Stack & Architecture" },
-                { name: "Maya Rodriguez", role: "Creative Director", focus: "UI/UX & Brand Strategy" },
-                { name: "David Kim", role: "Product Manager", focus: "Strategy & Client Relations" }
-              ].map((member, index) => (
-                <div key={index} className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-6 border border-zinc-800 hover:border-primary/30 transition-all">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-blue-600 rounded-full mb-4 flex items-center justify-center text-white text-xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-primary font-medium mb-2">{member.role}</p>
-                  <p className="text-zinc-400 text-sm">{member.focus}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </div>
       </div>
 
