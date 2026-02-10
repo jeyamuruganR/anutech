@@ -2,6 +2,8 @@
 
 import Navigation from "../navication/page";
 
+const whatsappNumber = "91XXXXXXXXXX"; // 👈 replace with your number
+
 export default function Pricing() {
   const plans = [
     {
@@ -19,7 +21,6 @@ export default function Pricing() {
       ],
       cta: "Get Started",
       popular: false,
-      accent: "from-blue-500 to-cyan-400",
     },
     {
       name: "Business Website",
@@ -36,7 +37,6 @@ export default function Pricing() {
       ],
       cta: "Choose Plan",
       popular: true,
-      accent: "from-purple-500 to-pink-500",
     },
     {
       name: "E-commerce Website",
@@ -53,7 +53,6 @@ export default function Pricing() {
       ],
       cta: "Start Selling",
       popular: false,
-      accent: "from-green-500 to-emerald-500",
     },
     {
       name: "AI Chatbot",
@@ -62,7 +61,7 @@ export default function Pricing() {
       description: "AI-powered chatbot solution",
       features: [
         { text: "Website Chatbot Integration", included: true },
-        { text: "OpenAI / NLP Based", included: true },
+        { text: "AI / NLP Based", included: true },
         { text: "FAQ + Smart Responses", included: true },
         { text: "Admin Training Support", included: true },
         { text: "WhatsApp Integration", included: false },
@@ -70,7 +69,6 @@ export default function Pricing() {
       ],
       cta: "Build Chatbot",
       popular: false,
-      accent: "from-orange-500 to-red-500",
     },
     {
       name: "GenAI / ML Project",
@@ -87,7 +85,6 @@ export default function Pricing() {
       ],
       cta: "Request Quote",
       popular: false,
-      accent: "from-yellow-500 to-orange-500",
     },
     {
       name: "Enterprise",
@@ -104,17 +101,25 @@ export default function Pricing() {
       ],
       cta: "Contact Sales",
       popular: false,
-      accent: "from-zinc-500 to-zinc-700",
     },
   ];
 
+  const openWhatsApp = (plan: string) => {
+    const message = `Hello, I am interested in the "${plan}" plan. Please share more details.`;
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-zinc-900 to-background text-foreground">
+    <div className="min-h-screen bg-zinc-950 text-white">
       <div className="sticky top-0 z-50">
         <Navigation />
       </div>
 
       <div className="py-20 px-4 max-w-7xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
             Pricing Plans (India)
@@ -125,15 +130,16 @@ export default function Pricing() {
           </p>
         </div>
 
+        {/* Pricing Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl p-8 border ${
+              className={`relative rounded-2xl p-8 border bg-zinc-900 transition ${
                 plan.popular
-                  ? "border-primary shadow-xl shadow-primary/20"
+                  ? "border-primary shadow-xl shadow-primary/20 scale-[1.03]"
                   : "border-zinc-800"
-              } bg-zinc-900/50 backdrop-blur`}
+              }`}
             >
               {plan.popular && (
                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm">
@@ -141,10 +147,10 @@ export default function Pricing() {
                 </span>
               )}
 
-              <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+              <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
               <p className="text-zinc-400 mb-4">{plan.tagline}</p>
 
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-bold mb-6">
                 {plan.price}
                 {plan.price !== "Custom" && (
                   <span className="text-sm text-zinc-400"> / project</span>
@@ -155,7 +161,7 @@ export default function Pricing() {
                 {plan.features.map((f, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <span
-                      className={`w-5 h-5 flex items-center justify-center rounded-full ${
+                      className={`w-5 h-5 flex items-center justify-center rounded-full text-sm ${
                         f.included
                           ? "bg-primary/20 text-primary"
                           : "bg-zinc-700 text-zinc-400"
@@ -168,7 +174,10 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <button className="w-full py-3 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition">
+              <button
+                onClick={() => openWhatsApp(plan.name)}
+                className="w-full py-3 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-white hover:opacity-90 transition"
+              >
                 {plan.cta}
               </button>
             </div>

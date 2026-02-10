@@ -132,21 +132,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                icon: <TrendingUp className="text-orange-500 w-10 h-10 mb-2" />, // Lucide icon
-                title: "SEO Growth",
-                description: "Boost your visibility with data-driven SEO strategies that drive organic traffic and conversions.",
+                icon: <TrendingUp className="text-orange-500 w-10 h-10 mb-2" />,
+                title: "🌐 Web Development & Online Presence",
+                description: "Static websites • SEO optimization • Domain & hosting setup • WordPress development • Full-stack projects",
                 color: "from-orange-500/20 to-orange-600/10"
               },
               {
-                icon: <Palette className="text-blue-500 w-10 h-10 mb-2" />, // Lucide icon
-                title: "UI/UX Design",
-                description: "Create intuitive user experiences that engage visitors and increase conversion rates.",
+                icon: <Zap className="text-blue-500 w-10 h-10 mb-2" />,
+                title: "🤖 AI & Automation",
+                description: "Website chatbot integration • AI-based projects • Machine learning solutions • Smart automation",
                 color: "from-blue-500/20 to-blue-600/10"
               },
               {
-                icon: <Zap className="text-green-500 w-10 h-10 mb-2" />, // Lucide icon
-                title: "Performance",
-                description: "Optimize your website speed and performance for better rankings and user satisfaction.",
+                icon: <Palette className="text-green-500 w-10 h-10 mb-2" />,
+                title: "💻 Academic & Project Support",
+                description: "Mini ML projects • AI project development • Web-based academic projects • Technical guidance",
                 color: "from-green-500/20 to-green-600/10"
               }
             ].map((service, i) => (
@@ -260,7 +260,7 @@ export default function Home() {
                   <div className="absolute -inset-4 bg-white/20 rounded-2xl blur-xl"></div>
                   <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/20">
                     <div className="text-center text-white">
-                      <div className="text-5xl font-bold mb-2">24/7</div>
+                      <div className="text-5xl font-bold mb-2">6/7</div>
                       <div className="text-lg">Support Available</div>
                     </div>
                   </div>
@@ -287,7 +287,7 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-4">Services</h4>
               <ul className="space-y-2">
-                {["SEO Optimization", "Web Development", "UI/UX Design", "Digital Marketing"].map((item) => (
+                {["Web Development", "AI & Automation", "WordPress", "Chatbot Integration"].map((item) => (
                   <li key={item}>
                     <a href="#" className="text-zinc-400 hover:text-primary transition">{item}</a>
                   </li>

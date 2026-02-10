@@ -41,15 +41,15 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      detail: "hello@marketme.com",
-      link: "mailto:hello@marketme.com",
+      detail: "muruganjeyao59@gmail.com",
+      link: "mailto:muruganjeyao59@gmail.com",
       color: "bg-blue-500/10 text-blue-500 border-blue-500/20"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      detail: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      detail: "+91 9150945606",
+      link: "tel:+919150945606",
       color: "bg-green-500/10 text-green-500 border-green-500/20"
     },
     {
@@ -62,7 +62,7 @@ export default function Contact() {
     {
       icon: <MessageSquare className="w-6 h-6" />,
       title: "Live Chat",
-      detail: "Available 24/7",
+      detail: "Available 5/7",
       link: "#",
       color: "bg-orange-500/10 text-orange-500 border-orange-500/20"
     }
@@ -139,7 +139,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                    placeholder="John Doe"
+                    placeholder="Jeya Murugan"
                   />
                 </div>
 
@@ -152,7 +152,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                    placeholder="john@example.com"
+                    placeholder="jeya@example.com"
                   />
                 </div>
 
@@ -217,15 +217,15 @@ export default function Contact() {
               <div className="space-y-3">
                 <div className="flex justify-between py-2 border-b border-zinc-800/50">
                   <span className="text-gray-400">Monday - Friday</span>
-                  <span className="font-semibold">9:00 AM - 6:00 PM</span>
+                  <span className="font-semibold">7:00 PM - 12:00 AM</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-zinc-800/50">
                   <span className="text-gray-400">Saturday</span>
-                  <span className="font-semibold">10:00 AM - 4:00 PM</span>
+                  <span className="font-semibold">4:00 PM - 12:00 AM</span>
                 </div>
                 <div className="flex justify-between py-2">
                   <span className="text-gray-400">Sunday</span>
-                  <span className="font-semibold">Closed</span>
+                  <span className="font-semibold">10:00 AM - 4:00 PM</span>
                 </div>
               </div>
             </div>

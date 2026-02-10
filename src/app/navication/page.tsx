@@ -19,7 +19,7 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: "Home", icon: <Home className="inline-block mr-2 mb-1" size={20} /> },
     { href: "/work", label: "Work", icon: <Layers className="inline-block mr-2 mb-1" size={20} /> },
-    { href: "/pricing", label: "Pricing", icon: <DollarSign className="inline-block mr-2 mb-1" size={20} /> },
+    // { href: "/pricing", label: "Pricing", icon: <DollarSign className="inline-block mr-2 mb-1" size={20} /> },
     { href: "/about", label: "About", icon: <User className="inline-block mr-2 mb-1" size={20} /> },
   ];
 
@@ -58,11 +58,11 @@ export default function Navigation() {
         <div className="flex items-center gap-2">
           <div className="relative flex items-center gap-2">
             <Image
-              src="/techmuruganLogo.png" 
+              src="/logogif.gif" 
               alt="TechMurugan Logo" 
               width={70} 
               height={70} 
-              className="w-16 h-16 text-primary border-2 rounded-full object-cover" 
+              className="w-16 h-16 text-primary  rounded-full object-cover" 
             />
 
             <span className="relative text-2xl font-bold text-white tracking-tight">
