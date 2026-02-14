@@ -5,6 +5,7 @@ import {
   Code2, Users, ChevronRight
 } from "lucide-react";
 
+import Footer from "../footer/page";
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-foreground font-sans overflow-hidden">
@@ -117,6 +118,7 @@ export default function About() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

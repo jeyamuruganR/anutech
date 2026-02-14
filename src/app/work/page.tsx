@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Navigation from "../navication/page";
+import Footer from "../footer/page";
 
 const projects = [
   {
@@ -182,6 +183,7 @@ export default function Work() {
           ))}
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 }

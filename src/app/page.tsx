@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./navication/page"; // Adjust the path if needed
 import { TrendingUp, Palette, Zap } from "lucide-react"; // <-- Add this import
+import Footer from "../app/footer/page";
 
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
           {/* Overlay for darkening */}
           <div className="absolute inset-0 bg-gradient-to-t from-background/100 via-background/50 to-background/0" />
         </div>
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-20 gap-8 sm:gap-12">
+        <div className="relative z-10  top-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-20 gap-8 sm:gap-12">
           <div className="flex-1 space-y-6 animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium border border-primary/20">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
@@ -270,70 +271,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer - Enhanced with more information */}
-      <footer className="mt-16 py-12 bg-gradient-to-t from-card to-background border-t border-zinc-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="text-2xl font-bold text-white mb-4">
-                Tech<span className="text-primary">Murugan</span>
-              </div>
-              <p className="text-zinc-400">
-                Empowering businesses with cutting-edge digital solutions since 2020.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-white font-semibold mb-4">Services</h4>
-              <ul className="space-y-2">
-                {["Web Development", "AI & Automation", "WordPress", "Chatbot Integration"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-zinc-400 hover:text-primary transition">{item}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="space-y-2">
-                {["About Us", "Careers", "Blog", "Contact"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-zinc-400 hover:text-primary transition">{item}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-white font-semibold mb-4">Connect</h4>
-              <div className="flex gap-4">
-                {["twitter", "linkedin", "github"].map((social) => (
-                  <a 
-                    key={social}
-                    href="#" 
-                    className="w-10 h-10 rounded-full bg-zinc-800 hover:bg-primary flex items-center justify-center transition-all hover:scale-110"
-                  >
-                    {social.charAt(0).toUpperCase()}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          <div className="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-zinc-400 text-sm">
-              © {new Date().getFullYear()} jeyamurganRajendiran. All rights reserved.
-            </div>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-zinc-400 hover:text-primary transition">Privacy Policy</a>
-              <a href="#" className="text-zinc-400 hover:text-primary transition">Terms of Service</a>
-              <a href="#" className="text-zinc-400 hover:text-primary transition">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+            <Footer />
     </div>
   );
 }

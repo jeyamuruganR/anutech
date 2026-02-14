@@ -17,6 +17,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import Footer from "../footer/page";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -235,6 +237,7 @@ export default function Contact() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
