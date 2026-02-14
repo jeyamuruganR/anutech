@@ -20,7 +20,7 @@ export default function ChatWidget() {
       {/* Chat Popup */}
       {open && (
         <div
-          className="fixed bottom-4 right-6 w-[380px] h-[700px] 
+          className="fixed bottom-4 right-0 w-[380px] h-[700px] 
           bg-white shadow-2xl rounded-2xl overflow-hidden z-50 
           border border-gray-200 flex flex-col"
         >
