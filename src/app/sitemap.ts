@@ -3,25 +3,25 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://www.techmurugan.in",
+      url: "https://techmurugan.in",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://www.techmurugan.in/work",
+      url: "https://techmurugan.in/work",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://www.techmurugan.in/about",
+      url: "https://techmurugan.in/about",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.5,
     },
     {
-      url: "https://www.techmurugan.in/contact",
+      url: "https://techmurugan.in/contact",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.5,
