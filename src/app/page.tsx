@@ -134,19 +134,19 @@ export default function Home() {
             {[
               {
                 icon: <TrendingUp className="text-orange-500 w-10 h-10 mb-2" />,
-                title: "🌐 Web Development & Online Presence",
+                title: "Web Development & Online Presence",
                 description: "Static websites • SEO optimization • Domain & hosting setup • WordPress development • Full-stack projects",
                 color: "from-orange-500/20 to-orange-600/10"
               },
               {
                 icon: <Zap className="text-blue-500 w-10 h-10 mb-2" />,
-                title: "🤖 AI & Automation",
+                title: "AI & Automation",
                 description: "Website chatbot integration • AI-based projects • Machine learning solutions • Smart automation",
                 color: "from-blue-500/20 to-blue-600/10"
               },
               {
                 icon: <Palette className="text-green-500 w-10 h-10 mb-2" />,
-                title: "💻 Academic & Project Support",
+                title: "Academic & Project Support",
                 description: "Mini ML projects • AI project development • Web-based academic projects • Technical guidance",
                 color: "from-green-500/20 to-green-600/10"
               }
